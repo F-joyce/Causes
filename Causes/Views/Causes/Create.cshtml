@@ -1,0 +1,26 @@
+﻿@model Causes.ViewModels.CreateCauseViewModel
+
+@{
+    ViewBag.Title = "Create a New Cause";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Causes"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Cause.Title)
+        @Html.TextBoxFor(m => m.Cause.Title, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Cause.Description)
+        @Html.TextBoxFor(m => m.Cause.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Cause.CauseTypeId)
+        @Html.DropDownListFor(m => m.Cause.CauseTypeId, new SelectList(Model.CauseTypes, "Id", "Type"), "Select a topic", new {@class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Save cause</button>
+}
+

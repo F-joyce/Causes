@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{6E51BD7D-4BAA-4010-885F-2A61302EE4F8}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Causes/Controllers/CausesController.cs">
+    <Files>
+      <File FileName="Causes/Controllers/CausesController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Causes" expanded="True">
+            <Node name="Causes" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Web.config" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Causes PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

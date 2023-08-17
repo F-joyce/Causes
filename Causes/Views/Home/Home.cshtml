@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Causes.ViewModels.PopularCauseViewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+
+}
+
+
+<div class="container home content-main">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron p-3 text-center my-5" style="background-color: #e3f2fd;">
+                <h1 class="text-center">Welcome to Cause Wallet</h1>
+                <p>
+                    Below you can see some of the popular causes
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="">
+    @foreach (var signedCause in Model)
+    {
+
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link cause active" href="#">Quick Look</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link action" href="#">Get Involved</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body cause-content">
+                <blockquote class="blockquote mb-0">
+                    <h2 class="h2">@signedCause.Cause.Title</h2>
+                    <p class="text-body font-italic">@signedCause.Cause.Description</p>
+                    <footer class="blockquote-footer my-3">Created by @signedCause.Cause.CreatorName</footer>
+                </blockquote>
+              
+
+                <p class="follower-count font-weight-light text-muted text-right">Signatures: <span class="text-body font-weight-normal">@signedCause.SignaturesCount</span></p>
+
+            </div>
+
+            <div class="card-body action-content collapse">
+
+                @Html.ActionLink("Details", "Details", "Causes", new { id = signedCause.Cause.Id }, new { @class = "btn btn-primary get-card-details" })
+
+                @Html.ActionLink("Sign this cause", "Sign", "Causes", new { id = signedCause.Cause.Id }, new { @class = "btn btn-success btn-join" })
+
+            </div>
+
+        </div>
+    }
+</div>
+
+

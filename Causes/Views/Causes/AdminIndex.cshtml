@@ -1,0 +1,43 @@
+﻿@model List<Causes.Models.Cause>
+
+@{
+    ViewBag.Title = "List Causes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-header">List causes</h2>
+
+<table class="table table-striped table-bordered">
+    <tr class="tab-pane">
+        <th>
+            Title
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="tab-content">
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", "Causes", new { id = item.Id }, null)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Causes", new { id = item.Id }, null)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", "Causes", new { id = item.Id }, null)
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+    @Html.ActionLink("Back to home", "Index", "Home")
+</p>
